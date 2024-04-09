@@ -1,7 +1,21 @@
+import { useNavigate } from "react-router-dom";
 import { Button } from "../components/ui/button";
 import { Input } from "@/components/ui/input";
+import { toast } from "sonner";
 
 export function Login(){
+  const navigate = useNavigate();
+    
+    function handleCreateAccount() {
+        navigate("/cadastro");
+      }
+
+      function handleLogin() {
+        toast.error(
+          "Nossa base de usuário está cheia no momento, tente novamente mais tarde."
+        );
+      }
+
     return (
         <div className="fixed inset-0 flex items-center justify-center bg-gray-300">
           <div className="md:max-w-[70%] w-full bg-primary rounded-[40px] flex flex-col rounded-br-[80px] relative">
@@ -36,13 +50,13 @@ export function Login(){
                     variant="default"
                     type="button"
                     className="bg-primary text-white text-lg w-full rounded-[5px] h-14 mt-10"
-                    
+                    onClick={handleLogin}
                   >
                    Fazer Login
                   </Button>
                   <span
                     className="text-bg-primary text-base cursor-pointer underline text-center w-full mt-2"
-                    
+                    onClick={handleCreateAccount}
                   >
                     Criar conta
                   </span>
