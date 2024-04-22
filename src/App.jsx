@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Register } from "./pages/Register";
 import { ForgotPassword } from "./pages/ForgotPassword"; 
 
+
 function App() {
   return (
     <BrowserRouter>
@@ -17,3 +18,6 @@ function App() {
 }
 
 export default App;
+
+
+

@@ -8,8 +8,11 @@ export function ForgotPassword() {
 
   function handleForgotPassword() {
     const email = document.getElementById("email").value;
-
     toast.success("Email de redefinição de senha enviado para " + email);
+  }
+
+  function handleBackToLogin() {
+    navigate("/"); 
   }
 
   return (
@@ -17,7 +20,7 @@ export function ForgotPassword() {
       <div className="md:max-w-[70%] w-full bg-primary rounded-[40px] flex flex-col rounded-br-[80px] relative">
         <div className="flex-1 flex flex-col md:flex-row h-full">
           <div className="flex-1 md:w-1/2 flex flex-col gap-3 p-5 items-center justify-center">
-          <img src="src/assets/Logo Transparente.png" alt="logo"/>
+            <img src="src/assets/Logo Transparente.png" alt="logo"/>
           </div>
           <form className="flex-1 flex flex-col gap-3 p-5 bg-white rounded-tr-[40px] rounded-br-[80px] rounded-tl-[80px] justify-center">
             <div className="flex flex-col items-center px-5 py-8 w-full">
@@ -36,14 +39,19 @@ export function ForgotPassword() {
               >
                 Enviar Email de Recuperação
               </Button>
-              
+              <span
+                className="text-bg-primary text-base cursor-pointer underline text-end w-full mt-2"
+                onClick={handleBackToLogin}
+              >
+                Realizar login
+              </span>
             </div>
+
           </form>
         </div>
       </div>
     </div>
   );
 }
-
 
 export default ForgotPassword;
