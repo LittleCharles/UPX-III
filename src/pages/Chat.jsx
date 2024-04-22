@@ -1,17 +1,19 @@
 import { useState } from "react";
 import { Input } from "../components/ui/input";
 import { Button } from "../components/ui/button";
-import { useNavigate } from "react-router-dom"; 
+import { useNavigate } from "react-router-dom";
 
 export function Chat() {
   const [messages, setMessages] = useState([]);
   const [newMessage, setNewMessage] = useState("");
-  const navigate = useNavigate(); 
+  const [currentUser, setCurrentUser] = useState("user1");
+  const navigate = useNavigate();
 
   function sendMessage() {
     if (newMessage.trim() !== "") {
-      setMessages([...messages, { text: newMessage, sender: "user" }]);
+      setMessages([...messages, { text: newMessage, sender: currentUser }]);
       setNewMessage("");
+      setCurrentUser(currentUser === "user1" ? "user2" : "user1");
     }
   }
 
@@ -35,8 +37,8 @@ export function Chat() {
                 {messages.map((message, index) => (
                   <div
                     key={index}
-                    className={`w-full py-2 px-4 my-1 rounded-lg ${
-                      message.sender === "user" ? "bg-primary text-white self-end" : "bg-gray-200 text-black self-start"
+                    className={`w-full py-2 px-4 my-1 rounded-lg text-center ${
+                      message.sender === "user1" ? "bg-primary text-white self-end" : "bg-gray-200 text-black self-start"
                     }`}
                   >
                     {message.text}
@@ -60,14 +62,12 @@ export function Chat() {
                   Enviar
                 </Button>
               </div>
-              <Button
-                variant="default"
-                type="button"
-                className="bg-primary text-white text-lg w-full rounded-[5px] h-14 mt-4"
-                onClick={handleBackToLogin} 
+              <span
+                className="text-bg-primary text-base cursor-pointer underline text-end w-full mt-2"
+                onClick={handleBackToLogin}
               >
-                Voltar para o Login
-              </Button>
+                Sair do chat
+              </span>
             </div>
           </div>
         </div>
