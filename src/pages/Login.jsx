@@ -20,6 +20,10 @@ export function Login() {
     navigate("/forgotPassword");
   }
 
+  function handleAccessChat() {
+    navigate("/chat"); // Navegar para a rota do chat
+  }
+
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-gray-300">
       <div className="md:max-w-[70%] w-full bg-primary rounded-[40px] flex flex-col rounded-br-[80px] relative">
@@ -56,6 +60,14 @@ export function Login() {
               >
                 Criar conta
               </span>
+              <Button
+                variant="default"
+                type="button"
+                className="bg-primary text-white text-lg w-full rounded-[5px] h-14 mt-4" 
+                onClick={handleAccessChat} 
+              >
+                Acessar Chat
+              </Button>
             </div>
           </form>
         </div>
