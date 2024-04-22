@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Register } from "./pages/Register";
 import { ForgotPassword } from "./pages/ForgotPassword";
 import Chat from "./pages/Chat";
+import { ProfilePage } from "./pages/profile/ProfilePage";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="/cadastro" element={<Register />} />
         <Route path="/forgotPassword" element={<ForgotPassword />} />
         <Route path="/chat" element={<Chat />} />
+        <Route path="/profile" element={<ProfilePage />}/>
       </Routes>
     </BrowserRouter>
   );

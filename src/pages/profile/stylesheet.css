@@ -1,0 +1,23 @@
+.bio
+{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    padding: 10px 50px;
+    text-align: center;
+    font-family: arial;
+}
+
+.profile
+{
+    display: flex;
+    border: 1px solid black;
+    top: 10px;
+    bottom: 10px;
+    margin: 0 auto;
+}
+
+.bio img
+{
+    border-radius: 50%;
+    object-fit: cover;
+}
