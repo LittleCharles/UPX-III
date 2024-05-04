@@ -21,7 +21,7 @@ export function Login() {
   }
 
   function handleAccessChat() {
-    navigate("/chat"); // Navegar para a rota do chat
+    navigate("/chat"); 
   }
 
   return (

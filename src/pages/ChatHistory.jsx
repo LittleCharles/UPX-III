@@ -1,5 +1,3 @@
-// ChatHistory.jsx
-
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "../components/ui/button";
@@ -39,7 +37,7 @@ export function ChatHistory() {
                 {Object.keys(dummyMessages).map((user) => (
                   <div key={user} className="mt-2">
                     <button
-                      className="text-lg font-bold text-blue-500 focus:outline-none"
+                      className="text-lg font-bold text-green-500 focus:outline-none"
                       onClick={() => setSelectedUser(user)}
                     >
                       {`Conversa com ${user}`}
@@ -50,7 +48,7 @@ export function ChatHistory() {
                           <div
                             key={index}
                             className={`w-full py-2 px-4 my-1 rounded-lg text-center ${
-                              message.sender === selectedUser ? "bg-green-600 text-white self-end" : "bg-gray-200 text-black self-start"
+                              message.sender === selectedUser ? "bg-green-700 text-white self-end" : "bg-gray-200 text-black self-start"
                             }`}
                           >
                             {message.text}
