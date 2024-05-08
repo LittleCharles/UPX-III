@@ -26,8 +26,7 @@ export function Register() {
           <div className="md:max-w-[70%] w-full  bg-primary rounded-[40px] flex flex-col rounded-br-[80px] relative">
             <div className="flex-1 flex flex-col md:flex-row h-full">
               <div className="flex-1 md:w-1/2 flex flex-col gap-3 p-5 items-center justify-center">
-              <p className="text-white text-8xl">LOGO</p>
-                
+              <img src="src/assets/Logo Transparente.png" alt="logo"/>
               </div>
               <form className="flex-1 md:w-1/2 flex flex-col gap-3 p-5 bg-white rounded-tr-[2.5rem] rounded-br-[5rem] rounded-tl-[5rem] justify-center">
                 <div className="flex flex-col items-center px-5 py-8 w-full">
