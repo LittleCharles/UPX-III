@@ -42,7 +42,6 @@ export function Login(){
                   </div>
                   <span
                     className="text-bg-primary text-base cursor-pointer underline text-end w-full mt-2"
-                   
                   >
                     Esqueceu a senha?
                   </span>
