@@ -3,6 +3,8 @@ import React, { useState } from 'react';
 //import {toast} from 'react-toastify' ;
 import './stylesheet.css';
 import { useNavigate } from "react-router-dom";
+import { Input } from '@/components/ui/input';
+import ProfilePicture from './ProfilePicture';
 
 
 export function ProfilePage()
@@ -56,7 +58,8 @@ function alterarSobrenome(e){
     
     <div className='profile'>
       <div className='bio'>
-        <img src="https://cc-prod.scene7.com/is/image/CCProdAuthor/FF-SEO-text-to-image-marquee-mobile-2x?$pjpeg$&jpegSize=100&wid=600"/>
+      <ProfilePicture/>
+     
         <h1>{nome}</h1>
         <p>{bio}</p> 
       </div>
@@ -74,6 +77,7 @@ function alterarSobrenome(e){
           <FormInput label="Cidade"  value={cidade} onChange = {alterarCidade}/>
           <FormInput label="Estado" value={estado} onChange = {alterarEstado}/>
           <FormInput label= "CPF" value ={cpf} onChange = {alterarCpf}/>
+
           </div>
 
         
@@ -82,7 +86,7 @@ function alterarSobrenome(e){
           
          
           <div className='bioLabel'>
-          <FormInput label="Bio" value={bio} onChange = {alterarBio}/>
+          <FormInput label="Bio"  className= "bioform" value={bio} onChange = {alterarBio}/>
          
           </div>
           </div>
