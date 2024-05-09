@@ -4,7 +4,7 @@ import { Button } from "../components/ui/button";
 
 const dummyMessages = {
   "Luiz": [
-    { text: "Olá Luiz, tudo bem??", sender: "Thiago" },
+    { text: "Olá Luiz, tudo bem?", sender: "Thiago" },
     { text: "Tudo sim. Pode me enviar mais informações sobre a camiseta?", sender: "Luiz" },
     { text: "Tudo bem e com você? Posso sim.", sender: "Thiago" },
   ],
