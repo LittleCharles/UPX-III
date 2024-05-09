@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Input } from "../components/ui/input";
 import { Button } from "../components/ui/button";
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export function Chat() {
   const [messages, setMessages] = useState([]);
@@ -18,7 +18,7 @@ export function Chat() {
   }
 
   function handleBackToLogin() {
-    navigate("/");
+    navigate("/home");
   }
 
   return (
@@ -61,14 +61,6 @@ export function Chat() {
                 >
                   Enviar
                 </Button>
-                <Link to="/historico"> 
-                  <Button
-                    variant="default"
-                    className="bg-primary text-white text-lg h-10 ml-2"
-                  >
-                    Histórico
-                  </Button>
-                </Link>
               </div>
               <span
                 className="text-bg-primary text-base cursor-pointer underline text-end w-full mt-2"
