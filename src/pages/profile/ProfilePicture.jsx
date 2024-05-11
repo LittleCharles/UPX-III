@@ -4,7 +4,7 @@ const ProfilePicture = () => {
     const [profileImage, setProfileImage] = useState(null);
     const fileInputRef = useRef(null);
 
-    const defaultProfileImage = "src\pages\profile\do-utilizador.png"; // Caminho para a imagem padrão
+    const defaultProfileImage = "..\..n\assets\imgpadrao.png"; // Caminho para a imagem padrão
 
     const handleImageChange = (event) => {
         const selectedFile = event.target.files[0];
