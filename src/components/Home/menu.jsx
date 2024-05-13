@@ -9,7 +9,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
-import { ArrowRightLeft, MessageSquareCode, Pencil, Shirt } from "lucide-react";
+import { ArrowRightLeft, MessageSquareCode, Pencil, Shirt, LogOut } from "lucide-react"; 
 
 export default function Menu() {
   return (
@@ -41,6 +41,12 @@ export default function Menu() {
           <Link to="/chat">
             <MessageSquareCode className="size-4 mr-2" />
             Mensagens
+          </Link>
+        </DropdownMenuItem>
+        <DropdownMenuItem>
+          <Link to="/">
+            <LogOut className="size-4 mr-2" />
+            Sair
           </Link>
         </DropdownMenuItem>
       </DropdownMenuContent>
