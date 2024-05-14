@@ -44,7 +44,7 @@
 .profile-image-button {
   /* Adicione seus estilos aqui */
   width: 100px;
-  height: 30px;
+  height: 60px;
   border-radius: 5px;
   background-color: #007bff;
   color: #fff;
@@ -56,8 +56,8 @@
   background-color: #0056b3;
 }
 
-.bioform{
-  width: 500px; /* Define a largura do formulário como 500px */
+.biolabel{
+  width: 100%; /* Define a largura do formulário como 500px */
   height: 500px; /* Define a altura do formulário como 150px */
 }
 

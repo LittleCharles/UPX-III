@@ -82,13 +82,13 @@ function alterarSobrenome(e){
 
         
 
-          <div className='formTwocollum'>
+          
           
          
           <div className='bioLabel'>
           <FormInput label="Bio"  className= "bioform" value={bio} onChange = {alterarBio}/>
          
-          </div>
+          
           </div>
           
 
