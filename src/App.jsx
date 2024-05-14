@@ -5,6 +5,7 @@ import { Register } from "./pages/Register"
 import Home from "./pages/Home"
 import Header from "./components/Header"
 import ProductDetails from "./pages/ProductDetails"
+import { ProfilePage } from "./pages/profile/ProfilePage"
 
 
 function App() {
@@ -18,6 +19,8 @@ function App() {
       <Route path="/home" element={<Home/>}/>
       <Route path="/header" element={<Header/>}/>
       <Route path="/produto" element={<ProductDetails/>}/>
+      <Route path="/profile" element={<ProfilePage/>}/>
+
     </Routes>
     </BrowserRouter>
   )

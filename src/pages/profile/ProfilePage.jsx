@@ -5,6 +5,8 @@ import './stylesheet.css';
 import { useNavigate } from "react-router-dom";
 import { Input } from '@/components/ui/input';
 import ProfilePicture from './ProfilePicture';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 
 
 export function ProfilePage()
@@ -55,7 +57,8 @@ function alterarSobrenome(e){
   setSobrenome(e.target.value);
 }
   return (
-    
+    <>
+    <Header />
     <div className='profile'>
       <div className='bio'>
       <ProfilePicture/>
@@ -77,27 +80,18 @@ function alterarSobrenome(e){
           <FormInput label="Cidade"  value={cidade} onChange = {alterarCidade}/>
           <FormInput label="Estado" value={estado} onChange = {alterarEstado}/>
           <FormInput label= "CPF" value ={cpf} onChange = {alterarCpf}/>
-
           </div>
-
-        
-
-          
-          
          
           <div className='bioLabel'>
           <FormInput label="Bio"  className= "bioform" value={bio} onChange = {alterarBio}/>
-         
-          
           </div>
-          
 
-         
           <FormInput type="Submit" value= "Salvar"/>
 
-        
        </div> 
     </div>
+    <Footer />
+    </>
   );
 }
 

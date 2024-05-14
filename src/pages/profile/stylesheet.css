@@ -9,7 +9,7 @@
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.8);
     background-color: rgb(95, 145, 136);
     max-width: 300px;
-    padding: 190px 50px;
+    padding: 110px 50px;
     margin-bottom: 50px;
     margin-top: 25px;
     text-align: center;
@@ -42,18 +42,17 @@
 }
 
 .profile-image-button {
-  /* Adicione seus estilos aqui */
   width: 100px;
   height: 60px;
   border-radius: 5px;
-  background-color: #007bff;
+  background-color: #4a726b;
   color: #fff;
   border: none;
   cursor: pointer;
 }
 
 .profile-image-button:hover {
-  background-color: #0056b3;
+  background-color: #283f3b;
 }
 
 .biolabel{
