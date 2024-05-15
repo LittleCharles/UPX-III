@@ -1,0 +1,146 @@
+
+.back
+{
+    background-color: black;
+}
+
+.bio
+{
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.8);
+    background-color: rgb(95, 145, 136);
+    max-width: 300px;
+    padding: 110px 50px;
+    margin-bottom: 50px;
+    margin-top: 25px;
+    text-align: center;
+    color: whitesmoke;
+    align-items: center;
+    justify-content: center;
+    font-family:  ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+}
+
+.profile
+{
+    background: whitesmoke;
+    display: flex;
+    top: 10px;
+    margin: 0 auto;
+    justify-content: flex-start;
+    padding-top: 10px;
+    font-family: ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;;;
+}
+
+.bio img
+{
+    height: 200px;
+   width: 200px;
+   margin-bottom: 30px;
+   background-size: cover;
+    border-radius: 50%;
+    object-fit: cover;
+    justify-content: center;   
+}
+
+.profile-image-button {
+  width: 100px;
+  height: 60px;
+  border-radius: 5px;
+  background-color: #4a726b;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.profile-image-button:hover {
+  background-color: #283f3b;
+}
+
+.biolabel{
+  width: 100%; /* Define a largura do formulário como 500px */
+  height: 500px; /* Define a altura do formulário como 150px */
+}
+
+.Informacoes
+{
+  color: rgb(95, 145, 136);;
+ font-family:  ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+ font-size: 60px;
+ font-style: normal;
+ padding-left: 50px;
+ margin-top: 10px;
+ text-shadow: 3px 2px 5px #5f5d5d8c;
+ 
+}
+
+.formulario
+{
+  padding: 25px 25px;
+  display: inline;
+ 
+
+
+}
+
+.formulario input
+{
+  margin-top: 10px;
+  padding: 10px 40px;
+  border-radius: 5px;
+  border: 2px solid lightgray;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+  outline: none;
+  display: inline;
+  
+ 
+
+}
+
+
+
+.formulario input:focus
+{
+ 
+  border: 2px solid rgb(148, 163, 184);
+  
+}
+
+.formulario  input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* para uso no Firefox */
+.formulario input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.formulario input[type=submit]
+{
+background-color:  rgb(95, 145, 136);
+color: whitesmoke;
+}
+
+.bioLabel
+{
+  width: 300px;
+  
+}
+.formTwocollum {
+  width: 1000px;
+  display: flex;
+  flex-wrap: wrap; /* Ensures elements wrap to next line if needed */
+}
+
+.formTwocollum > * {
+  width: 40%; /* Sets width of each child element to 50% */
+  margin-bottom: 30px; /* Add some spacing between form elements */
+}
+
+.formlabel
+{
+    font-size: 20px;
+    color: rgb(95, 145, 136);;
+    font-family:  ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji
+}
+ 

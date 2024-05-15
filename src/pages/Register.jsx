@@ -17,7 +17,7 @@ export function Register() {
       function handleRedirect() {
         toast.success("Conta criada com sucesso.");
         setTimeout(() => {
-          navigate("/");
+          navigate("/Login");
         }, 1000);
       }
     

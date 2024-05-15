@@ -8,12 +8,16 @@ import ProductDetails from "./pages/ProductDetails";
 import { ForgotPassword } from "./pages/ForgotPassword";
 import { Chat } from "./pages/Chat";
 import { ChatHistory } from "./pages/ChatHistory";
+import { ProfilePage } from "./pages/profile/ProfilePage"
+
 
 function App() {
+
+
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Login />} />
+        <Route path="/Login" element={<Login />} />
         <Route path="/cadastro" element={<Register />} />
         <Route path="/home" element={<Home />} />
         <Route path="/header" element={<Header />} />
@@ -21,9 +25,10 @@ function App() {
         <Route path="/forgot-password" element={<ForgotPassword />} />
         <Route path="/chat" element={<Chat />} />
         <Route path="/chat-history" element={<ChatHistory />} />
+        <Route path="/profile" element={<ProfilePage/>}/>
       </Routes>
     </BrowserRouter>
-  );
+  )
 }
 
-export default App;
+export default App

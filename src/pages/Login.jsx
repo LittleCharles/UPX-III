@@ -1,16 +1,22 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "../components/ui/button";
-import { Input } from "../components/ui/input";
+import { Input } from "@/components/ui/input";
 import { toast } from "sonner";
 
-export function Login() {
+export function Login(){
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  function handleCreateAccount() {
-    navigate("/cadastro");
+      function handleLogin() {
+        toast.error(
+          "Nossa base de usuário está cheia no momento, tente novamente mais tarde."
+        );
+      }
+
+  function handleCreateAccount(){
+    navigate ("/cadastro")
   }
 
   function handleLogin() {
@@ -74,6 +80,6 @@ export function Login() {
           </form>
         </div>
       </div>
-    </div>
-  );
-}
+      </div>
+      );
+    }

@@ -13,6 +13,7 @@ import { ArrowRightLeft, MessageSquareCode, Pencil, Shirt, LogOut } from "lucide
 
 export default function Menu() {
   return (
+    
     <DropdownMenu>
       <DropdownMenuTrigger>
         <Avatar>
@@ -23,10 +24,8 @@ export default function Menu() {
       <DropdownMenuContent className="w-48">
         <DropdownMenuLabel className="text-sm">Menu</DropdownMenuLabel>
         <DropdownMenuSeparator />
-        <DropdownMenuItem className="text-sm">
-          <Pencil className="size-4 mr-2" />
-          Editar Perfil
-        </DropdownMenuItem>
+        <DropdownMenuItem  to="/profile" className="text-sm">
+          <Pencil className="size-4 mr-2"/>Editar Perfil</DropdownMenuItem>
         <DropdownMenuItem>
           <Shirt className="size-4 mr-2" />
           Armario
@@ -44,7 +43,7 @@ export default function Menu() {
           </Link>
         </DropdownMenuItem>
         <DropdownMenuItem>
-          <Link to="/">
+          <Link to="/Login">
             <LogOut className="size-4 mr-2" />
             Sair
           </Link>
