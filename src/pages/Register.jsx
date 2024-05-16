@@ -11,7 +11,7 @@ export function Register() {
     const navigate = useNavigate();
 
     function handleReturnHome() {
-        navigate("/");
+        navigate("/Login");
       }
 
       function handleRedirect() {

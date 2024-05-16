@@ -1,12 +1,13 @@
 import FormInput from './FormInput';
 import React, { useState } from 'react';
-//import {toast} from 'react-toastify' ;
 import './stylesheet.css';
-import { useNavigate } from "react-router-dom";
+import { Navigate, useNavigate } from "react-router-dom";
 import { Input } from '@/components/ui/input';
 import ProfilePicture from './ProfilePicture';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import { Button } from '@/components/ui/button';
+import { toast } from "sonner";
 
 
 export function ProfilePage()
@@ -20,6 +21,7 @@ export function ProfilePage()
   const[email, setEmail] = useState();
   const[cpf, setCpf] = useState();
   const [bio, setBio] = useState();
+  const navigate = useNavigate();
   
 
  function alterarNome(e){
@@ -56,6 +58,13 @@ function alterarBio(e){
 function alterarSobrenome(e){
   setSobrenome(e.target.value);
 }
+function handleReturnHome(){
+  toast.success("Informações alteradas com sucesso.");
+  setTimeout(() => {
+    navigate("/Home");
+  }, 1000);
+}
+
   return (
     <>
     <Header />
@@ -86,7 +95,8 @@ function alterarSobrenome(e){
           <FormInput label="Bio"  className= "bioform" value={bio} onChange = {alterarBio}/>
           </div>
 
-          <FormInput type="Submit" value= "Salvar"/>
+
+          <Button  type="button" onClick={handleReturnHome}>Salvar</Button>
 
        </div> 
     </div>
