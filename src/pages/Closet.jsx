@@ -102,7 +102,7 @@ export function Closet() {
                     style={{ marginRight: "8px" }}
                     onClick={() => toggleMenu(index)}
                   >
-                    {/* Ícone de três pontos na vertical */}
+                    
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       className="h-5 w-5"
@@ -116,7 +116,16 @@ export function Closet() {
                   </button>
                   {showMenuIndex === index && (
                     <div className="bg-white rounded-lg shadow-lg absolute mt-2 right-0">
-                      {/* ... (Botões Editar e Doar - igual ao código original) ... */}
+                                            <button
+                        className="block px-4 py-2 text-sm text-black hover:text-green-500 w-full"
+                      >
+                        Editar
+                      </button>
+                      <button
+                        className="block px-4 py-2 text-sm text-black hover:text-green-500 w-full"
+                      >
+                        Doar
+                      </button>
                       <button
                         className="block px-4 py-2 text-sm text-red-600 hover:bg-red-100 w-full"
                         onClick={() => deleteItem(index)}
