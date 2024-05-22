@@ -4,28 +4,29 @@ import { Button } from "../components/ui/button";
 import { Input } from "@/components/ui/input";
 import { toast } from "sonner";
 
-export function Login(){
+export function Login() {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-      function handleLogin() {
-        toast.error(
-          "Nossa base de usuário está cheia no momento, tente novamente mais tarde."
-        );
-      }
+  function handleLogin() {
+    toast.error(
+      "Nossa base de usuário está cheia no momento, tente novamente mais tarde."
+    );
+  }
 
-  function handleCreateAccount(){
-    navigate ("/cadastro")
+  function handleCreateAccount() {
+    navigate("/cadastro")
   }
 
   function handleLogin() {
- 
-    if (email === "admin@admin.com" && password === "1234") {
-    
+
+    if (email === "admin@admin.com" && password === "1234" || email === "th.faro86@gmail.com" && password === "hanglose") {
+
       navigate("/home");
+
     } else {
-    
+
       toast.error("Email ou senha incorretos. Tente novamente.");
     }
   }
@@ -80,6 +81,6 @@ export function Login(){
           </form>
         </div>
       </div>
-      </div>
-      );
-    }
+    </div>
+  );
+}

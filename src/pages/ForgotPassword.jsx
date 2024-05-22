@@ -12,7 +12,7 @@ export function ForgotPassword() {
   }
 
   function handleBackToLogin() {
-    navigate("/"); 
+    navigate("/Login"); 
   }
 
   return (

@@ -27,8 +27,10 @@ export default function Menu() {
         <DropdownMenuItem  to="/profile" className="text-sm">
           <Pencil className="size-4 mr-2"/>Editar Perfil</DropdownMenuItem>
         <DropdownMenuItem>
+          <Link to="/closet">
           <Shirt className="size-4 mr-2" />
           Armario
+          </Link>
         </DropdownMenuItem>
         <DropdownMenuItem>
           <Link to="/chat-history">
