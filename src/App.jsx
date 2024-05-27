@@ -11,7 +11,7 @@ import { ChatHistory } from "./pages/ChatHistory";
 import { Closet } from "./pages/Closet";
 import { RegisterClothes } from "./pages/RegisterClothes";
 import { ProfilePage } from "./pages/profile/ProfilePage";
-
+import { Donation } from "./pages/Donation";
 
 function App() {
   return (
@@ -28,6 +28,7 @@ function App() {
         <Route path="/chat" element={<Chat />} />
         <Route path="/chat-history" element={<ChatHistory />} />
         <Route path="/profile" element={<ProfilePage />} />
+        <Route path="/donation" element={<Donation />} />
       </Routes>
     </BrowserRouter>
   );
