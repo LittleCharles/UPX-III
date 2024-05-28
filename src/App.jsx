@@ -5,6 +5,9 @@ import { Register } from "./pages/Register"
 import Home from "./pages/Home"
 import Header from "./components/Header"
 import ProductDetails from "./pages/ProductDetails"
+import SendTrade from "./pages/SendTrade"
+import Closet from "./pages/Closet"
+import Donate from "./pages/Donate"
 
 
 function App() {
@@ -18,6 +21,10 @@ function App() {
       <Route path="/home" element={<Home/>}/>
       <Route path="/header" element={<Header/>}/>
       <Route path="/produto" element={<ProductDetails/>}/>
+      <Route path="/proposta" element={<SendTrade/>}/>
+      <Route path="/armario" element={<Closet/>}/>
+      <Route path="/doacao" element={<Donate/>}/>
+      {/* <Route path="/obrigado" element={}/> */}
     </Routes>
     </BrowserRouter>
   )

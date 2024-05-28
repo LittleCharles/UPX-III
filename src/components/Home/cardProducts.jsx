@@ -10,9 +10,15 @@ import { Button } from "../ui/button"
 import { Badge } from "../ui/badge"
 import { Heart } from "lucide-react"
 import { clothes } from "@/mock/cardProducts"
+import { useNavigate } from "react-router-dom"
   
 
 export default function CardProducts() {
+  const navigate = useNavigate();
+
+  function handleTrade() {
+      navigate("/proposta");
+  }
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
       {clothes.map((cloth) => (
@@ -31,7 +37,7 @@ export default function CardProducts() {
                 <h3>{cloth.name}</h3>
                 <p>{cloth.size}</p>
                 <Button className="bg-white text-primary border border-primary">Ver mais</Button>
-                <Button className="text-white hover:bg-white hover:text-primary border border-primary">Enviar proposta</Button>
+                <Button className="text-white hover:bg-white hover:text-primary border border-primary" onClick={handleTrade}>Enviar proposta</Button>
               </div>
             </CardContent>
           </Card>
