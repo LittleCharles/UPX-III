@@ -1,3 +1,5 @@
+import React from "react";
+import { Link } from "react-router-dom";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -7,18 +9,13 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
-import { ArrowRightLeft, MessageSquareCode, Pencil, Shirt } from "lucide-react";
+import { ArrowRightLeft, DoorOpen, MessageSquareCode, Pencil, Shirt } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 export default function Menu() {
   
-  const navigate = useNavigate();
-
-  function handleCloset() {
-      navigate("/armario");
-    }
-
   return (
+    
     <DropdownMenu>
       <DropdownMenuTrigger>
         <Avatar>
@@ -29,11 +26,11 @@ export default function Menu() {
       <DropdownMenuContent className="w-48">
         <DropdownMenuLabel className="text-sm">Menu</DropdownMenuLabel>
         <DropdownMenuSeparator />
-        <DropdownMenuItem className="text-sm">
+        <DropdownMenuItem as={Link} to="/profile">
           <Pencil className="size-4 mr-2" />
           Editar Perfil
         </DropdownMenuItem>
-        <DropdownMenuItem onClick={handleCloset}>
+        <DropdownMenuItem as={Link} to="/armario">
           <Shirt className="size-4 mr-2" />
           Armario
         </DropdownMenuItem>
@@ -41,9 +38,13 @@ export default function Menu() {
           <ArrowRightLeft className="size-4 mr-2" />
           Propostas de trocas
         </DropdownMenuItem>
-        <DropdownMenuItem>
+        <DropdownMenuItem as={Link} to="/chat">
           <MessageSquareCode className="size-4 mr-2" />
           Mensagens
+        </DropdownMenuItem>
+        <DropdownMenuItem as={Link} to="/">
+          <DoorOpen className="size-4 mr-2" />
+          Sair
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>

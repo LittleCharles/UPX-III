@@ -17,14 +17,11 @@ import {
   Trash2,
 } from "lucide-react";
 import DrawerEdit from "./DrawerEdit";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function MenuCloset() {
   const navigate = useNavigate();
 
-  function handleDonate() {
-      navigate("/doacao");
-    }
   return (
     <DropdownMenu>
       <DropdownMenuTrigger>
@@ -34,7 +31,7 @@ export default function MenuCloset() {
         <DropdownMenuItem asChild className="text-sm">
           <DrawerEdit/>
         </DropdownMenuItem>
-        <DropdownMenuItem onClick={handleDonate}>
+        <DropdownMenuItem  as={Link} to="/doacao">
           <HeartHandshake className="size-4 mr-2" />
           Doar
         </DropdownMenuItem>

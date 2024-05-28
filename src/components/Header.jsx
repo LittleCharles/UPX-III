@@ -1,18 +1,24 @@
-import { Search } from "lucide-react";
+import { Search as SearchIcon } from "lucide-react";
 import NavMenu from "./Header/navMenu";
+import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import Menu from "./Home/menu";
-import { useNavigate } from "react-router-dom";
+import { Search } from "../pages/Search";
 
 export default function Header() {
-  
   const navigate = useNavigate();
+  const [query, setQuery] = useState('');
+
+  const handleSearch = () => {
+    navigate(`/Search?query=${query}`);
+  }
 
   function handleHome() {
-      navigate("/home");
-    }
+    navigate("/home");
+}
 
   return (
     <div className="shadow-lg p-8">
@@ -20,8 +26,8 @@ export default function Header() {
       <div className="flex items-center gap-20">
           <button onClick={handleHome}>LOGO</button>
           <div className="flex">
-          <Input className="w-[350px]" type="text" placeholder="Pesquisar..." />
-          <button className="ml-[-30px]"type="submit"><Search className="size-5"/></button>
+            <Input className="w-[350px]" type="text" value={query} onChange={(e) => setQuery(e.target.value)} placeholder="Pesquisar..." />
+            <button className="ml-[-30px]" type="submit" onClick={handleSearch}><SearchIcon className="size-5"/></button>
           </div>
           <NavMenu />
         </div>

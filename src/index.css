@@ -75,3 +75,12 @@
       @apply bg-background text-foreground;
     }
   }
+
+  .logo-container {
+    width: 60px; /* Defina o tamanho desejado para o contêiner do logo */
+  }
+  
+  .logo-image {
+    max-width: 250%; 
+    height: auto; 
+  }

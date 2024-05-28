@@ -42,7 +42,6 @@ export function FormEdit() {
         descricao: "A calça jogger masculina da marca Sufgang, tamanho 40, combina conforto e estilo. Com uma cintura de 86 cm, quadril de 112 cm, gancho de 33 cm e comprimento de 102 cm, esta calça oferece um ajuste perfeito graças ao elástico na cintura. Ideal para um look casual e descontraído, esta peça é essencial para qualquer guarda-roupa moderno.",
       }}
       validationSchema={ProductSchema}
-      onSubmit={handleFormSubmit}
     >
       {({ setFieldValue, values }) => (
         <Form className="w-full">
@@ -226,7 +225,7 @@ export function FormEdit() {
             />
           </div>
 
-          <Button type="submit" className="w-full">
+          <Button onClick={handleFormSubmit} className="w-full">
             Editar Produto
           </Button>
         </Form>
