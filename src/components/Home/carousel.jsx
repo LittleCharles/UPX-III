@@ -9,17 +9,28 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel"
 
+import image1 from '/Users/thiagofaro/Desktop/UPX-III/src/assets/logo banner.png';
+import image2 from "/Users/thiagofaro/Desktop/UPX-III/src/assets/loja banner.png";
+import image3 from '/Users/thiagofaro/Desktop/UPX-III/src/assets/roupas inverno.png';
+
+const imageUrls = [
+  image1,
+  image2,
+  image3,
+
+];
+
 export default function CarouselHome() {
   return (
   
     <Carousel className="w-full mt-16">
       <CarouselContent>
-        {Array.from({ length: 5 }).map((_, index) => (
+        {imageUrls.map((url, index) => (
           <CarouselItem key={index}>
             <div>
               <Card className="h-[500px]">
                 <CardContent className="flex aspect-square items-center justify-center p-0 h-[500px] w-full">
-                  <img className="rounded-lg" src="https://www.smartertravel.com/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2016/07/Best-US-Shopping-States_HERO-1400x500.jpg.webp"/>
+                  <img className="rounded-lg" src={url} alt={`Imagem ${index + 1}`} />
                 </CardContent>
               </Card>
             </div>

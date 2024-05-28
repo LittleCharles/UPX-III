@@ -34,7 +34,7 @@ export default function Menu() {
           <Shirt className="size-4 mr-2" />
           Armario
         </DropdownMenuItem>
-        <DropdownMenuItem>
+        <DropdownMenuItem as={Link} to="/proposta">
           <ArrowRightLeft className="size-4 mr-2" />
           Propostas de trocas
         </DropdownMenuItem>
