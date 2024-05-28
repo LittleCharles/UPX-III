@@ -14,6 +14,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
+import { ArrowRight } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { toast } from "sonner";
 
@@ -24,8 +25,9 @@ export default function Closet() {
     <>
       <Header />
       <h1 className="text-center pt-10 mb-10 text-5xl text-primary font-semibold">Armário</h1>
-      <div className="flex max-w-[1400px] m-auto justify-center gap-40">
+      <div className="flex max-w-[1400px] m-auto justify-center">
         <TableCloset/>
+        <ArrowRight className="text-primary size-36 mx-4"/>
         <ProductDetailsCloset/>
       </div>
       <Footer />

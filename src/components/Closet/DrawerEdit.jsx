@@ -22,7 +22,7 @@ export default function DrawerEdit() {
             )}
           >
             <Pencil className="m-2 size-4" />
-            Editar usuário
+            Editar Roupa
           </button>
       </SheetTrigger>
       <SheetContent className="w-[640px]">

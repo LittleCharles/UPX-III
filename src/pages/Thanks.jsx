@@ -12,36 +12,30 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { HeartHandshake } from "lucide-react";
+import { HandHeart, HeartHandshake } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { toast } from "sonner";
 
-export default function Donate() {
+export default function Thanks() {
 
   const navigate = useNavigate();
 
-  function handleDonate() {
-    toast.success(
-      "Doação enviada com sucesso"
-    );
-    setTimeout(() => {
-      navigate("/obrigado");
-    }, 1000);
+  function handleHome() {
+      navigate("/home");
   }
-  return (
+  return(
     <>
       <Header />
-      <h1 className="text-center pt-10 mb-10 text-5xl text-primary font-semibold">Doação</h1>
       <div className="flex max-w-[1400px] m-auto justify-center items-center">
-        <TableCloset/>
-        <HeartHandshake className="text-primary size-36 mx-4" />
-        <TableDonate/>
-       
+        <div className="flex flex-col items-center mt-40 mb-72">
+        <HandHeart className="text-primary size-40" />
+            <h1 className="text-6xl font-semibold mb-5">Muito Obrigado pela sua Doação!!</h1>
+            <h3 className="text-2xl font-semibold">Seu apoio faz toda a diferença. Juntos, estamos construindo um futuro melhor.</h3>
+            <Button onClick={handleHome} className="mt-4">Voltar para a Home</Button>
+        </div>
+        
       </div>
-       <div className="flex max-w-[1400px] m-auto justify-end">
-      <Button onClick={handleDonate} className="w-[620px] mt-4 mb-10">Enviar Doação</Button>
-      </div>
-      
+    
       <Footer />
     </>
   );

@@ -9,24 +9,24 @@ import {
 import { Button } from "../ui/button"
 import { Badge } from "../ui/badge"
 import { Heart } from "lucide-react"
-import { clothes } from "@/mock/cardProducts"
 import { useNavigate } from "react-router-dom"
+import { clothesRelated } from "@/mock/cardProductsRelated"
   
 
-export default function CardProducts() {
+export default function CardProductsRelated() {
   const navigate = useNavigate();
 
   function handleTrade() {
       navigate("/proposta");
   }
-
+  
   function handleMoreDetails() {
-    navigate("/produto");
-}
+      navigate("/produto");
+  }
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
-      {clothes.map((cloth) => (
+      {clothesRelated.map((cloth) => (
         <div key={cloth.id} className="min-w-[250px] max-w-[250px] border-primary border rounded-lg">
           <Card className="rounded-none border-none bg-card-none shadow-none">
             <CardContent className="p-0">
@@ -41,7 +41,7 @@ export default function CardProducts() {
               <div className="flex flex-col gap-2 p-4">
                 <h3>{cloth.name}</h3>
                 <p>{cloth.size}</p>
-                <Button className="bg-white text-primary border border-primary hover:bg-white" onClick={handleMoreDetails}>Ver mais</Button>
+                <Button onClick={handleMoreDetails} className="bg-white text-primary border border-primary hover:bg-white">Ver mais</Button>
                 <Button className="text-white hover:bg-white hover:text-primary border border-primary" onClick={handleTrade}>Enviar proposta</Button>
               </div>
             </CardContent>

@@ -7,9 +7,18 @@ import {
     CardTitle,
   } from "@/components/ui/card"
 import { Button } from "../ui/button"
+import { useNavigate } from "react-router-dom";
   
 
 export default function CardProductDetails() {
+
+  
+  const navigate = useNavigate();
+
+  function handleTrade() {
+      navigate("/proposta");
+    }
+
   return (
     <div className="border-primary border rounded-lg p-3 mt-10">
     <Card className="rounded-none border-none bg-card-none shadow-none">
@@ -19,7 +28,7 @@ export default function CardProductDetails() {
         <p>Combinar entrega com o usuario</p>
       </div>
       <div>
-        <Button className="w-full hover:bg-white hover:text-primary border border-primary">Enviar Proposta</Button>
+        <Button onClick={handleTrade} className="w-full hover:bg-white hover:text-primary border border-primary">Enviar Proposta</Button>
       </div>
     </CardContent>
   </Card>

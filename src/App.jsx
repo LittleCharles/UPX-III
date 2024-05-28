@@ -8,6 +8,7 @@ import ProductDetails from "./pages/ProductDetails"
 import SendTrade from "./pages/SendTrade"
 import Closet from "./pages/Closet"
 import Donate from "./pages/Donate"
+import Thanks from "./pages/Thanks"
 
 
 function App() {
@@ -24,7 +25,7 @@ function App() {
       <Route path="/proposta" element={<SendTrade/>}/>
       <Route path="/armario" element={<Closet/>}/>
       <Route path="/doacao" element={<Donate/>}/>
-      {/* <Route path="/obrigado" element={}/> */}
+      <Route path="/obrigado" element={<Thanks/>}/>
     </Routes>
     </BrowserRouter>
   )

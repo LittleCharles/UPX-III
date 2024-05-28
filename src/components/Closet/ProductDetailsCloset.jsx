@@ -25,7 +25,7 @@ export default function ProductDetailsCloset() {
         <h2>Marca: Sufgang</h2>
         <h2>Tam: 40</h2>
         <h2>Cor: Preta</h2>
-        <h3>Calça sufgang masculina, tamanho 40, fechamento em zíper e botão, tecido resistente e sem elasticidade, com costuras reforçadas e detalhes em pesponto, cintura média da marca StreetRise. Cintura: 82 cm Quadril: 104 cm Gancho: 30 cm Comprimento: 106 cm.</h3>
+        <h3>A calça jogger masculina da marca Sufgang, tamanho 40, combina conforto e estilo. Com uma cintura de 86 cm, quadril de 112 cm, gancho de 33 cm e comprimento de 102 cm, esta calça oferece um ajuste perfeito graças ao elástico na cintura. Ideal para um look casual e descontraído, esta peça é essencial para qualquer guarda-roupa moderno.</h3>
       </div>
         </div>
     </>

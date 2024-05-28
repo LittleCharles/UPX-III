@@ -4,13 +4,21 @@ import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import Menu from "./Home/menu";
+import { useNavigate } from "react-router-dom";
 
 export default function Header() {
+  
+  const navigate = useNavigate();
+
+  function handleHome() {
+      navigate("/home");
+    }
+
   return (
     <div className="shadow-lg p-8">
       <div className="flex max-w-[1400px] justify-between items-center m-auto gap-32">
       <div className="flex items-center gap-20">
-          <span>LOGO</span>
+          <button onClick={handleHome}>LOGO</button>
           <div className="flex">
           <Input className="w-[350px]" type="text" placeholder="Pesquisar..." />
           <button className="ml-[-30px]"type="submit"><Search className="size-5"/></button>

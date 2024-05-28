@@ -33,13 +33,13 @@ export function FormEdit() {
     <Formik
       initialValues={{
         imagens: [],
-        nome: "LC",
-        marca: "AAAA",
-        tamanho: "",
-        cor: "",
-        genero: "",
-        tipo: "",
-        descricao: "",
+        nome: "Calça Sufgang",
+        marca: "Sufgang",
+        tamanho: "40",
+        cor: "Preta",
+        genero: "masculino",
+        tipo: "calca",
+        descricao: "A calça jogger masculina da marca Sufgang, tamanho 40, combina conforto e estilo. Com uma cintura de 86 cm, quadril de 112 cm, gancho de 33 cm e comprimento de 102 cm, esta calça oferece um ajuste perfeito graças ao elástico na cintura. Ideal para um look casual e descontraído, esta peça é essencial para qualquer guarda-roupa moderno.",
       }}
       validationSchema={ProductSchema}
       onSubmit={handleFormSubmit}
@@ -217,7 +217,7 @@ export function FormEdit() {
               as={Textarea}
               id="descricao"
               name="descricao"
-              className="mt-1 p-2 w-full border rounded-md"
+              className="mt-1 p-2 w-full min-h-32 border rounded-md"
             />
             <ErrorMessage
               name="descricao"
@@ -227,7 +227,7 @@ export function FormEdit() {
           </div>
 
           <Button type="submit" className="w-full">
-            Cadastrar Produto
+            Editar Produto
           </Button>
         </Form>
       )}
