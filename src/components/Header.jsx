@@ -24,7 +24,9 @@ export default function Header() {
     <div className="shadow-lg p-8">
       <div className="flex max-w-[1400px] justify-between items-center m-auto gap-32">
       <div className="flex items-center gap-20">
-          <button onClick={handleHome}>LOGO</button>
+          <button onClick={handleHome}>
+          <img src="src/assets/logo verde(fundo branco) grande.png" alt="Logo" width="100" height="50"/>
+          </button>
           <div className="flex">
             <Input className="w-[350px]" type="text" value={query} onChange={(e) => setQuery(e.target.value)} placeholder="Pesquisar..." />
             <button className="ml-[-30px]" type="submit" onClick={handleSearch}><SearchIcon className="size-5"/></button>
