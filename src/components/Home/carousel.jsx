@@ -8,16 +8,14 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel"
-
-import image1 from '/Users/thiagofaro/Desktop/UPX-III/src/assets/logo banner.png';
-import image2 from "/Users/thiagofaro/Desktop/UPX-III/src/assets/loja banner.png";
-import image3 from '/Users/thiagofaro/Desktop/UPX-III/src/assets/roupas inverno.png';
+import image1 from '../../assets/logo banner.png';
+import image2 from "../../assets/loja banner.png";
+import image3 from '../../assets/roupas inverno.png';
 
 const imageUrls = [
   image1,
   image2,
   image3,
-
 ];
 
 export default function CarouselHome() {
