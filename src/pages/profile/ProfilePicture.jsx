@@ -4,7 +4,8 @@ const ProfilePicture = () => {
     const [profileImage, setProfileImage] = useState(null);
     const fileInputRef = useRef(null);
 
-    const defaultProfileImage = "../../assets/imgpadrao.png"; 
+    const defaultProfileImage = "https://i.imgur.com/HnBQoX6.png";
+ 
 
     const handleImageChange = (event) => {
         const selectedFile = event.target.files[0];
