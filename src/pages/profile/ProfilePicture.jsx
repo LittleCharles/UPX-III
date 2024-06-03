@@ -4,7 +4,7 @@ const ProfilePicture = () => {
     const [profileImage, setProfileImage] = useState(null);
     const fileInputRef = useRef(null);
 
-    const defaultProfileImage = "../../assets/imgpadrao.png"; 
+    const defaultProfileImage = "https://github.com/shadcn.png"; 
 
     const handleImageChange = (event) => {
         const selectedFile = event.target.files[0];
@@ -23,8 +23,8 @@ const ProfilePicture = () => {
 
     return (
         <div>
-            <div>
-                <div>
+            <div className='flex flex-col justify-center items-center'>
+                <div className='w-[300px]'>
                     {profileImage && (
                         <img
                             src={profileImage}
@@ -36,7 +36,7 @@ const ProfilePicture = () => {
                             src={defaultProfileImage}
                             alt="Default Profile"
                             onClick={handleImageClick}
-                            className="profile-image-placeholder"
+                            className="rounded-[200px] mb-8"
                         />
                     )}
                 </div>
@@ -49,7 +49,7 @@ const ProfilePicture = () => {
                 />
                 <button
                     onClick={handleImageClick}
-                    className="profile-image-button"
+                    className="border-2 p-2.5 rounded-lg bg-profileButton"
                 >
                     Mudar imagem
                 </button>
