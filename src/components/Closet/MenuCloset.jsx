@@ -19,9 +19,8 @@ import {
 import DrawerEdit from "./DrawerEdit";
 import { Link, useNavigate } from "react-router-dom";
 
-export default function MenuCloset() {
-  const navigate = useNavigate();
-
+export default function MenuCloset({ onDelete }) {
+  
   return (
     <DropdownMenu>
       <DropdownMenuTrigger>
@@ -31,11 +30,11 @@ export default function MenuCloset() {
         <DropdownMenuItem asChild className="text-sm">
           <DrawerEdit/>
         </DropdownMenuItem>
-        <DropdownMenuItem  as={Link} to="/doacao">
+        <DropdownMenuItem as={Link} to="/doacao">
           <HeartHandshake className="size-4 mr-2" />
           Doar
         </DropdownMenuItem>
-        <DropdownMenuItem>
+        <DropdownMenuItem onClick={onDelete}>
           <Trash2 className="size-4 mr-2" />
           Excluir
         </DropdownMenuItem>
