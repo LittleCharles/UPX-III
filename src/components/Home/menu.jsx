@@ -26,7 +26,7 @@ export default function Menu() {
       <DropdownMenuContent className="w-48">
         <DropdownMenuLabel className="text-sm">Menu</DropdownMenuLabel>
         <DropdownMenuSeparator />
-        <DropdownMenuItem as={Link} to="/profile">
+        <DropdownMenuItem >
           <Pencil className="size-4 mr-2" />
           Editar Perfil
         </DropdownMenuItem>

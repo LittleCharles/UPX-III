@@ -12,7 +12,7 @@ import Thanks from "./pages/Thanks"
 import ForgotPassword from "./pages/ForgotPassword"
 import { Chat } from "./pages/Chat"
 import { ChatHistory } from "./pages/ChatHistory"
-// import { ProfilePage } from "./pages/profile/ProfilePage"
+// import Profile from "./pages/Profile";
 import { Search } from "./pages/Search"
 
 
@@ -32,7 +32,7 @@ function App() {
       <Route path="/forgot-password" element={<ForgotPassword />} />
       <Route path="/chat" element={<Chat />} />
       <Route path="/chat-history" element={<ChatHistory />} />
-      {/* <Route path="/profile" element={<ProfilePage />} /> */}
+      {/* <Route path="/profile" element={<Profile />} /> */}
       <Route path="/search" element={<Search />} />
     </Routes>
     </BrowserRouter>

@@ -21,7 +21,7 @@ export function Login() {
 
   function handleLogin() {
 
-    if (email === "admin@admin.com" && password === "1234" || email === "th.faro86@gmail.com" && password === "hanglose") {
+    if (email === "admin@admin.com" && password === "1234" || email === "th.faro86@gmail.com" && password === "1234") {
 
       navigate("/home");
 
