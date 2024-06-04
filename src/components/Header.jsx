@@ -25,7 +25,7 @@ export default function Header() {
       <div className="flex max-w-[1400px] justify-between items-center m-auto gap-32">
       <div className="flex items-center gap-20">
           <button onClick={handleHome}>
-          <img src="src/assets/logo verde(fundo branco) grande.png" alt="Logo" width="100" height="50"/>
+          <img src="src/assets/logo verde(fundo branco) grande.png" alt="Logo" className="w-48 mb-[-7px]"/>
           </button>
           <div className="flex">
             <Input className="w-[350px]" type="text" value={query} onChange={(e) => setQuery(e.target.value)} placeholder="Pesquisar..." />

@@ -20,7 +20,11 @@ module.exports = {
       height: {
         fit: "fit-content",
       },
+      boxShadow: {
+        'custom': '0px 0px 50px 10px rgba(0,0,0,0.2)',
+      },
       colors: {
+        profileButton: '#4a726b',
         myHover: "hsla(169, 21%, 35%, 1)",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

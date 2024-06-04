@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { Input } from "../components/ui/input";
 import { Button } from "../components/ui/button";
 import { useNavigate, Link } from "react-router-dom";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 export function Chat() {
   const [messages, setMessages] = useState([]);
@@ -22,15 +24,15 @@ export function Chat() {
   }
 
   return (
-    <div className="fixed inset-0 flex items-center justify-center bg-gray-300">
-      <div className="md:max-w-[70%] w-full bg-primary rounded-[40px] flex flex-col rounded-br-[80px] relative">
+    <>
+    <Header/>
+    <div className="inset-0 flex items-center justify-center mt-20 mb-20">
+      <div className="md:max-w-[70%] w-full rounded-[40px] flex flex-col rounded-br-[80px] relative">
         <div className="flex-1 flex flex-col md:flex-row h-full">
-          <div className="flex-1 md:w-1/2 flex flex-col gap-3 p-5 items-center justify-center">
-            <img src="src/assets/Logo Transparente.png" alt="logo"/>
-          </div>
-          <div className="flex-1 flex flex-col gap-3 p-5 bg-white rounded-tr-[40px] rounded-br-[80px] rounded-tl-[80px] justify-center">
+         
+          <div className="flex-1 flex flex-col gap-3 p-5 bg-white rounded-tr-[40px] rounded-br-[80px] rounded-tl-[80px] justify-center shadow-custom">
             <div className="flex flex-col items-center px-5 py-8 w-full">
-              <span className="text-bg-primary text-4xl text-center font-normal">
+              <span className="text-primary text-4xl text-center font-semibold">
                 Chat
               </span>
               <div className="flex flex-col h-64 overflow-y-auto w-full mt-4">
@@ -62,11 +64,11 @@ export function Chat() {
                   Enviar
                 </Button>
               </div>
-              <Link to="/chat-history" className="text-base cursor-pointer underline text-end w-full mt-2">
+              <Link to="/chat-history" className="text-base cursor-pointer underline text-end w-fit mt-2 self-end">
                 Ver Histórico de Mensagens
               </Link>
               <span
-                className="text-bg-primary text-base cursor-pointer underline text-end w-full mt-2"
+                className="text-bg-primary text-base cursor-pointer underline text-end w-fit self-end mt-2"
                 onClick={handleBackToLogin}
               >
                 Sair do chat
@@ -76,5 +78,7 @@ export function Chat() {
         </div>
       </div>
     </div>
+    <Footer/>
+    </>
   );
 }

@@ -12,8 +12,9 @@ import Thanks from "./pages/Thanks"
 import ForgotPassword from "./pages/ForgotPassword"
 import { Chat } from "./pages/Chat"
 import { ChatHistory } from "./pages/ChatHistory"
-// import Profile from "./pages/Profile";
+import { ProfilePage } from "./pages/profile/ProfilePage"
 import { Search } from "./pages/Search"
+import HistoryTrade from "./pages/HistoryTrade"
 
 
 function App() {
@@ -32,8 +33,9 @@ function App() {
       <Route path="/forgot-password" element={<ForgotPassword />} />
       <Route path="/chat" element={<Chat />} />
       <Route path="/chat-history" element={<ChatHistory />} />
-      {/* <Route path="/profile" element={<Profile />} /> */}
+      <Route path="/profile" element={<ProfilePage />} />
       <Route path="/search" element={<Search />} />
+      <Route path="/propostas-de-trocas" element={<HistoryTrade />} />
     </Routes>
     </BrowserRouter>
   );
