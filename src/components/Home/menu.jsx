@@ -9,7 +9,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
-import { ArrowRightLeft, DoorOpen, MessageSquareCode, Pencil, Shirt } from "lucide-react";
+import { ArrowRightLeft, DoorOpen, MessageSquareCode, Pencil, Shirt, Home } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 export default function Menu() {
@@ -26,6 +26,10 @@ export default function Menu() {
       <DropdownMenuContent className="w-48">
         <DropdownMenuLabel className="text-sm">Menu</DropdownMenuLabel>
         <DropdownMenuSeparator />
+        <DropdownMenuItem as={Link} to="/home">
+          <Home className="size-4 mr-2" />
+          Home
+        </DropdownMenuItem>
         <DropdownMenuItem as={Link} to="/profile">
           <Pencil className="size-4 mr-2" />
           Editar Perfil
